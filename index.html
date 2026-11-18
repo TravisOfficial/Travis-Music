@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TRAVIS MUSIC</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">♫</div>
+            <span>TRAVIS MUSIC</span>
+        </div>
+
+        <nav class="navigation">
+
+            <a href="#" class="nav-item active">
+                <span>⌂</span> Home
+            </a>
+
+            <a href="#library" class="nav-item">
+                <span>⌕</span> Search
+            </a>
+
+            <a href="#library" class="nav-item">
+                <span>▤</span> Your Library
+            </a>
+
+        </nav>
+
+        <div class="sidebar-divider"></div>
+
+        <div class="library-heading">YOUR COLLECTION</div>
+
+        <div class="playlist-list">
+
+            <div class="playlist-item">
+                <div class="playlist-cover liked">♥</div>
+                <div>
+                    <strong>Liked Songs</strong>
+                    <small>Favorite tracks</small>
+                </div>
+            </div>
+
+            <div class="playlist-item">
+                <div class="playlist-cover vintage">♫</div>
+                <div>
+                    <strong>Old Memories</strong>
+                    <small>Personal playlist</small>
+                </div>
+            </div>
+
+            <div class="playlist-item">
+                <div class="playlist-cover chill">☁</div>
+                <div>
+                    <strong>Late Night</strong>
+                    <small>Relaxing sounds</small>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sidebar-bottom">
+            <span>PERSONAL MUSIC PLAYER</span>
+            <small>Made with ♡ by Travis</small>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div class="navigation-arrows">
+                <button aria-label="Go back" onclick="history.back()">‹</button>
+                <button aria-label="Go forward" onclick="history.forward()">›</button>
+            </div>
+
+            <div class="topbar-right">
+                <span class="premium-label">YOUR MUSIC SPACE</span>
+                <div class="profile">T</div>
+            </div>
+
+        </header>
+
+
+        <!-- GREETING -->
+
+        <section class="greeting">
+
+            <p>YOUR PERSONAL MUSIC SPACE</p>
+
+            <h1>Good evening.</h1>
+
+            <span>Enjoy the music. Take your time.</span>
+
+        </section>
+
+
+        <!-- FEATURED SONG -->
+
+        <section class="featured-section">
+
+            <div class="section-title">
+                <h2>Featured track</h2>
+                <span>YOUR CURRENT SONG</span>
+            </div>
+
+            <div class="featured-card">
+
+                <div class="album-art" id="albumArt">
+
+                    <img
+                        src="VilRai.JPG"
+                        alt="VilRai Album Artwork"
+                    >
+
+                </div>
+
+                <div class="featured-info">
+
+                    <span class="track-category">NOW PLAYING</span>
+
+                    <h2>A Little Love Song</h2>
+
+                    <p class="artist-name">
+                        A song made for this moment
+                    </p>
+
+                    <div class="featured-description">
+                        Some songs make you remember things.
+                        Some songs just make you smile.
+                        This one is a little bit of both.
+                    </div>
+
+                    <div class="featured-actions">
+
+                        <button id="featuredPlay" class="green-button">
+                            ▶ PLAY SONG
+                        </button>
+
+                        <span class="track-duration" id="featuredDuration">
+                            LOADING...
+                        </span>
+
+                    </div>
+
+                    <div id="status">READY TO PLAY</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACCESS -->
+
+        <section class="quick-section" id="library">
+
+            <div class="section-title">
+                <h2>Made for you</h2>
+            </div>
+
+            <div class="quick-grid">
+
+                <div class="quick-card">
+                    <div class="quick-icon liked">♥</div>
+                    <div>
+                        <strong>Liked Songs</strong>
+                        <small>Your favorites</small>
+                    </div>
+                </div>
+
+                <div class="quick-card">
+                    <div class="quick-icon vintage">♫</div>
+                    <div>
+                        <strong>Old Memories</strong>
+                        <small>For nostalgic moments</small>
+                    </div>
+                </div>
+
+                <div class="quick-card">
+                    <div class="quick-icon chill">☁</div>
+                    <div>
+                        <strong>Late Night</strong>
+                        <small>Relax and listen</small>
+                    </div>
+                </div>
+
+                <div class="quick-card">
+                    <div class="quick-icon special">✦</div>
+                    <div>
+                        <strong>Special Track</strong>
+                        <small>Something unexpected</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LYRICS -->
+
+        <section class="lyrics-section">
+
+            <div class="section-title">
+                <h2>Song lyrics</h2>
+                <span>LIVE LYRICS</span>
+            </div>
+
+            <div class="lyrics-card">
+
+                <div class="lyrics-top">
+
+                    <div>
+                        <span class="lyrics-label">CURRENT TRACK</span>
+                        <h3>A Little Love Song</h3>
+                    </div>
+
+                    <span class="lyrics-music">♫</span>
+
+                </div>
+
+                <div id="lyrics" class="lyrics-content">
+
+                    <p class="active">
+                        Press play and let the music begin...
+                    </p>
+
+                </div>
+
+                <div class="lyrics-bottom">
+                    LYRICS EXPERIENCE · TRAVIS MUSIC
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRANK SECTION -->
+
+        <section class="prank-section">
+
+            <div class="prank-card">
+
+                <div>
+                    <span class="prank-label">A LITTLE SOMETHING</span>
+
+                    <h2>Enjoying the music?</h2>
+
+                    <p>
+                        There's actually something waiting for you.
+                    </p>
+                </div>
+
+                <button id="surpriseBtn" class="prank-button">
+                    OPEN SURPRISE ↗
+                </button>
+
+            </div>
+
+
+            <div id="surpriseMessage" class="surprise-message hidden">
+
+                <span class="surprise-symbol">✦</span>
+
+                <h2>YOU GOT PRANKED! 😂</h2>
+
+                <p>
+                    HAHAHA! You really thought this was Spotify?
+
+                    <br><br>
+
+                    Welcome to TRAVIS MUSIC.
+
+                    <br>
+
+                    Thanks for listening!
+                </p>
+
+                <span class="surprise-footer">
+                    END OF TRANSMISSION ♡
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <footer class="main-footer">
+            TRAVIS MUSIC · PERSONAL PLAYER · 2026
+        </footer>
+
+    </main>
+
+
+    <!-- RIGHT PANEL -->
+
+    <aside class="right-panel">
+
+        <div class="right-panel-header">
+            <h3>Now Playing</h3>
+            <span>•••</span>
+        </div>
+
+        <div class="right-cover" id="rightCover">
+
+            <img
+                src="VilRai.JPG"
+                alt="VilRai Now Playing Artwork"
+            >
+
+        </div>
+
+        <div class="right-song-info">
+
+            <div>
+                <h2>A Little Love Song</h2>
+                <p>A song made for this moment</p>
+            </div>
+
+            <span class="heart-icon">♡</span>
+
+        </div>
+
+        <div class="right-panel-divider"></div>
+
+        <div class="about-song">
+
+            <span>ABOUT THIS TRACK</span>
+
+            <p>
+                A little corner of the internet
+                dedicated to music and memories.
+            </p>
+
+        </div>
+
+        <div class="right-panel-footer">
+            LOCAL AUDIO PLAYER
+        </div>
+
+    </aside>
+
+</div>
+
+
+<!-- BOTTOM MUSIC PLAYER -->
+
+<footer class="bottom-player">
+
+    <div class="bottom-track">
+
+        <div class="mini-cover">
+            <img
+                src="VilRai.JPG"
+                alt="VilRai Thumbnail"
+            >
+        </div>
+
+        <div class="bottom-track-info">
+            <strong>A Little Love Song</strong>
+            <span>TRAVIS MUSIC</span>
+        </div>
+
+        <button class="like-button" aria-label="Like song">♡</button>
+
+    </div>
+
+
+    <div class="bottom-controls">
+
+        <div class="control-buttons">
+
+            <button id="shuffleBtn" title="Shuffle">⤨</button>
+
+            <button id="previousBtn" title="Restart">|◀</button>
+
+            <button id="playBtn" class="main-play" aria-label="Play">
+                ▶
+            </button>
+
+            <button id="nextBtn" title="Next">▶|</button>
+
+            <button id="repeatBtn" title="Repeat">↻</button>
+
+        </div>
+
+        <div class="progress-area">
+
+            <span id="currentTime">0:00</span>
+
+            <div class="progress-track" id="progressContainer">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+
+            <span id="duration">0:00</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="bottom-volume">
+
+        <span>♫</span>
+
+        <input
+            type="range"
+            id="volumeSlider"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.8"
+            aria-label="Volume"
+        >
+
+    </div>
+
+</footer>
+
+
+<!-- LOCAL MP3 -->
+
+<audio id="song" preload="metadata">
+    <source src="./song.mp3" type="audio/mpeg">
+</audio>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
